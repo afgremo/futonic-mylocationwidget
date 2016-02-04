@@ -157,7 +157,13 @@ public class MyLocation implements ILocationWidgetInfo {
 		return String.format(Locale.ENGLISH, Constants.URL_FlickrPhotos, getLatitude(), getLongitude());
 	}
 	private String getGoogleMapsUrl(String message) {
-		return String.format(Locale.ENGLISH, Constants.URL_GmapsBase, getLatitude(), getLongitude(), Uri.encode(message));
+		//return String.format(Locale.ENGLISH, Constants.URL_GmapsBase, getLatitude(), getLongitude(), Uri.encode(message));
+		return String.format(Locale.ENGLISH, Constants.URL_OsmBase, getLatitude(), getLongitude());
+	}
+	
+	private String getOsmUrl(String message) {
+		//return String.format(Locale.ENGLISH, Constants.URL_GmapsBase, getLatitude(), getLongitude(), Uri.encode(message));
+		return String.format(Locale.ENGLISH, Constants.URL_OsmBase, getLatitude(), getLongitude());
 	}
 
 	
